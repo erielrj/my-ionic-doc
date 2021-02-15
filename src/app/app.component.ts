@@ -11,6 +11,7 @@ export class AppComponent {
     { title: 'Alert', url: '/alert', icon: 'notifications-circle' },
     { title: 'Action Sheet', url: '/actionsheet', icon: 'file-tray-full' },
     { title: 'Badge', url: '/badge', icon: 'pricetag' },
+    { title: 'Card', url: '/card', icon: 'stop' },
   ];
   constructor() {}
 }

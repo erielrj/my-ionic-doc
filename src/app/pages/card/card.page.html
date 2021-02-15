@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h3>Card com Header e Content</h3>
+
+  <ion-card mode="ios">
+    <ion-card-header>
+      <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+      <ion-card-title>Awesome Title</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta culpa architecto quaerat cumque, facilis iure repellendus velit aut minima deleniti a dolores doloribus voluptatem similique veniam aperiam magni soluta amet?
+    </ion-card-content>
+  </ion-card>
+
+
+  <h3>Card com imagem</h3>
+
+  <ion-card>
+    <ion-img src="https://picsum.photos/400/250"></ion-img>
+    <ion-card-content>
+      <ion-card-title>Awesome Title</ion-card-title>
+      <ion-card-subtitle>Awesome Title</ion-card-subtitle>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quisquam qui fugiat excepturi consequuntur eos in unde, numquam mollitia distinctio aspernatur porro earum labore pariatur magni nulla cupiditate, iusto natus.</p>
+    </ion-card-content>
+  </ion-card>
+
+
+  <h3>Card com Ion Itens</h3>
+  <ion-card mode="ios">
+    <ion-item>
+      <ion-label [routerLink]="['/home']" routerLinkActive="router-link-active">Wi-fi</ion-label>
+      <ion-icon name="wifi" slot="start"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Pizza</ion-label>
+      <ion-icon name="pizza" slot="start"></ion-icon>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="shirt" slot="end"></ion-icon>
+      <ion-label>Shop</ion-label>
+    </ion-item>
+  </ion-card>
+
+
+  <h3>Card com tema (color)</h3>
+  <ion-card color="dark">
+    <ion-card-header>
+      <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+      <ion-card-title>Awesome Title</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quo vitae laudantium corrupti debitis, fugiat corporis porro magnam maxime repudiandae blanditiis commodi, odit cupiditate. Voluptate velit est voluptates obcaecati quis.
+    </ion-card-content>
+  </ion-card>
+</ion-content>
