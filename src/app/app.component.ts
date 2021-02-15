@@ -12,6 +12,7 @@ export class AppComponent {
     { title: 'Action Sheet', url: '/actionsheet', icon: 'file-tray-full' },
     { title: 'Badge', url: '/badge', icon: 'pricetag' },
     { title: 'Card', url: '/card', icon: 'stop' },
+    { title: 'Checkbox', url: '/checkbox', icon: 'checkbox' },
   ];
   constructor() {}
 }
