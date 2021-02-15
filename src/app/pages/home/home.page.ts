@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor(
+    // Injetando NavController para Navegar entre as rotas
+    private navCtrl: NavController
+  ) { }
 
   ngOnInit() {
+  }
+
+  navToBackPage(){
+    this.navCtrl.navigateForward(['back'])
   }
 
 }

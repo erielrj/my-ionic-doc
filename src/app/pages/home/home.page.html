@@ -1,12 +1,28 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-menu-button ></ion-menu-button>
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Home</ion-title>
+    <ion-title>Home / Navegação</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <h3 class="ion-text-center">Minha documentação dos componentes do Ionic</h3>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Minha documentação dos componentes do IONIC</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Awesome content
+    </ion-card-content>
+  </ion-card>
+
+  <h4 class="mt2"><strong>Navegação</strong></h4>
+  <ion-note>Navegação simples</ion-note>
+  <ion-button routerLink="/back">Ir para a Page Back</ion-button>
+
+  <ion-note>Navegação com NavController</ion-note>
+  <ion-button (click)="navToBackPage()">Ir para a Page Back</ion-button>
+
 </ion-content>
