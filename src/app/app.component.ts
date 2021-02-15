@@ -10,6 +10,7 @@ export class AppComponent {
     { title: 'Botões', url: '/button', icon: 'grid' },
     { title: 'Alert', url: '/alert', icon: 'notifications-circle' },
     { title: 'Action Sheet', url: '/actionsheet', icon: 'file-tray-full' },
+    { title: 'Badge', url: '/badge', icon: 'pricetag' },
   ];
   constructor() {}
 }
