@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: 'back',
     loadChildren: () => import('./pages/back/back.module').then( m => m.BackPageModule)
+  },
+  {
+    path: 'button',
+    loadChildren: () => import('./pages/button/button.module').then( m => m.ButtonPageModule)
+  },
+  {
+    path: 'alert',
+    loadChildren: () => import('./pages/alert/alert.module').then( m => m.AlertPageModule)
   }
 ];
 

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Alert</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h3>Alert Padrão</h3>
+  <ion-button (click)="alert()" expand="block">
+    Alert Default
+  </ion-button>
+
+  <h3>Alert Multiplos Botões</h3>
+  <ion-button (click)="alertMultipleButtons()" expand="block">
+    Alert Multiple Buttons
+  </ion-button>
+
+  <h3>Alert Confirmação</h3>
+  <ion-button (click)="alertConfirm()" expand="block">
+    Alert Confirm
+  </ion-button>
+
+  <h3>Alert Prompt (Formulário 1)</h3>
+  <ion-button (click)="alertPrompt()" expand="block">
+    Alert Prompt
+  </ion-button>
+
+  <h3>Alert Prompt (Autenticação)</h3>
+  <ion-button (click)="alertPromptAuth()" expand="block">
+    Alert Prompt
+  </ion-button>
+
+  <h3>Alert Radio</h3>
+  <ion-button (click)="alertRadio()" expand="block">
+    Alert Prompt
+  </ion-button>
+
+  <h3>Alert Checkbox</h3>
+  <ion-button (click)="alertCheckbox()" expand="block">
+    Alert Prompt
+  </ion-button>
+</ion-content>
