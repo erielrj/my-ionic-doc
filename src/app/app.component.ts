@@ -13,7 +13,9 @@ export class AppComponent {
     { title: 'Badge', url: '/badge', icon: 'pricetag' },
     { title: 'Card', url: '/card', icon: 'stop' },
     { title: 'Checkbox', url: '/checkbox', icon: 'checkbox' },
-    { title: 'Chip', url: '/chip', icon: 'checkbox' },
+    { title: 'Chip', url: '/chip', icon: 'pin' },
+    { title: 'Content', url: '/content', icon: 'layers' },
+    { title: 'Datetime', url: '/datetime', icon: 'calendar' },
   ];
   constructor() {}
 }
