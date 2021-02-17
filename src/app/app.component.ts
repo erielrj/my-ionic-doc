@@ -16,6 +16,8 @@ export class AppComponent {
     { title: 'Chip', url: '/chip', icon: 'pin' },
     { title: 'Content', url: '/content', icon: 'layers' },
     { title: 'Datetime', url: '/datetime', icon: 'calendar' },
+    { title: 'FAB', url: '/fab', icon: 'color-filter' },
+    { title: 'Grid', url: '/grid', icon: 'grid' },
   ];
   constructor() {}
 }
