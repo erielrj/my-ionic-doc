@@ -5,8 +5,13 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  public appPages = [
-    { title: 'Home', url: '/home', icon: 'home' },
+
+  public uiOpen: boolean = false;
+  public angularFeaturesOpen: boolean = false;
+
+  color = 'yellow';
+
+  public UIComponents = [
     { title: 'Botões', url: '/button', icon: 'grid' },
     { title: 'Alert', url: '/alert', icon: 'notifications-circle' },
     { title: 'Action Sheet', url: '/actionsheet', icon: 'file-tray-full' },
@@ -19,5 +24,10 @@ export class AppComponent {
     { title: 'FAB', url: '/fab', icon: 'color-filter' },
     { title: 'Grid', url: '/grid', icon: 'grid' },
   ];
+  
+  public angularFeatures = [
+    { title: 'Data Binding', url: '/button', icon: 'grid' },
+  ]
+
   constructor() {}
 }
