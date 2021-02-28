@@ -1,0 +1,168 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Data Binding</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-md-center">
+  <section class="property-binding ion-padding">
+    <h3>Property Binding e Interpolation</h3>
+    <img bind-src="interpolation" />
+
+    <article>
+      <h4>Interpolation:</h4>
+      <p>String renderizada com interpolação: {{ course }}</p>
+
+      <p>
+        (Expressões) <br />
+        Resultado de 1 + 1 é: {{ 1 + 1 }}.
+      </p>
+
+      <p>
+        (Chamando Métodos) <br />
+        Resultado de de 1 + 1 não é: {{ 1 + 1 + getValue() }}
+      </p>
+
+      <p>
+        (Boolean) <br />
+        Curso Angular e Curtir Curso: {{ cursoAngular && getCurtirCurso() }}
+      </p>
+      <br />
+    </article>
+
+    <article>
+      <h4>Property Binding:</h4>
+      <img [src]="propertyBinding" alt="" />
+
+      <p>[src]="variable" ou bind-src="variable"</p>
+
+      <img [src]="propertyBindingBind" alt="" />
+
+      <p>src="&#123; &#123; url &#125; &#125;"</p>
+
+      <img
+        src="{{ propertyBindingInterpolation }}"
+        alt=""
+        class="ion-margin-bottom"
+      />
+    </article>
+  </section>
+
+  <hr />
+
+  <section class="ion-margin-top style-class-binding">
+    <article class="ion-margin-top ion-padding">
+      <h3>Style and Class Binding</h3>
+
+      <div>
+        <span>Selecione uma classe:</span>
+        <select #classes (change)="0">
+          <option value="success">Success</option>
+          <option value="secondary">Secondary</option>
+          <option value="danger">Danger</option>
+        </select>
+      </div>
+
+      <p class="alert {{ 'alert-' + classes.value }}">
+        Classe selecionada: {{ classes.value }}
+      </p>
+
+      <p class="alert" [class.alert-success]="classes.value == 'success'">
+        Success
+      </p>
+      <p class="alert" [class.alert-secondary]="classes.value == 'secondary'">
+        Secondary
+      </p>
+      <p class="alert" [class.alert-danger]="classes.value == 'danger'">
+        Danger
+      </p>
+
+      <p
+        class="alert alert-danger"
+        [style.display]="classes.value == 'danger' ? 'block' : 'none'"
+      >
+        Esse alerta irá aparecer no caso de erro!
+      </p>
+    </article>
+  </section>
+
+  <section class="event-binding">
+    <article class="ion-padding">
+      <h3>Event Binding</h3>
+      <img src="https://i.imgur.com/6DkRj39.png" />
+      <img src="https://i.imgur.com/NDXGowT.png" />
+
+      <div>
+        <ion-button expand="block" (click)="onClick()">
+          <ion-label>Me clique</ion-label>
+        </ion-button>
+
+        <br />
+
+        <p>Tratando eventos</p>
+
+        <input
+          type="text"
+          placeholder="Digite algo"
+          (keyup)="onKeyUp($event)"
+          (keyup.enter)="onSave($event.target)"
+          (blur)="onBlurSave(campo.value)"
+          #campo
+        />
+
+        <p>Conteúdo Atual: {{ conteudoAtual }}</p>
+        <p>Conteúdo Salvo: {{ conteudoSalvo }}</p>
+
+        <br />
+
+        <p>Mouseover + Class Binding</p>
+
+        <p
+        (mouseover)="toggleMouseOver()"
+        (mouseout)="toggleMouseOver()"
+        [class.highlight]="isMouseOver"
+        >Passe o mouse por mim</p>
+
+        <br>
+
+        <p>Mouseover + Element DOM</p>
+
+        <p
+          (mouseover)="onMouseOver($event.target)"
+          (mouseout)="onMouseOut($event.target)"
+        >
+          Passe o mouse por mim
+        </p>
+      </div>
+    </article>
+  </section>
+
+
+  <section class="two-way-data-binding">
+    <article class="ion-padding">
+      <h3>Two Way Data Binding</h3>
+
+      <div>
+        <input type="text" [value]="name" (input)="name = $event.target.value"><br>
+
+        <input type="text" [ngModel]="name" (ngModelChange)="name = $event"><br>
+
+        <input type="text" [(ngModel)]="name"><br>
+
+        <input type="text" bindon-ngModel="name"><br>
+
+        <p><strong>Você digitou:</strong> {{ name }}</p>
+      </div>
+
+      <div>
+        <input type="text" [(ngModel)]="pessoa.name">
+        <input type="text" [(ngModel)]="pessoa.age">
+        <p>Meu nome é {{ pessoa.name }} e tenho {{ pessoa.age }} anos de idade.</p>
+      </div>
+    </article>
+  </section>
+
+</ion-content>

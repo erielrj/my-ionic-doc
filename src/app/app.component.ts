@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-
   public uiOpen: boolean = false;
   public angularFeaturesOpen: boolean = false;
 
@@ -24,10 +23,10 @@ export class AppComponent {
     { title: 'FAB', url: '/fab', icon: 'color-filter' },
     { title: 'Grid', url: '/grid', icon: 'grid' },
   ];
-  
+
   public angularFeatures = [
-    { title: 'Data Binding', url: '/button', icon: 'grid' },
-  ]
+    { title: 'Data Binding', url: '/data-binding', icon: 'grid' },
+  ];
 
   constructor() {}
 }

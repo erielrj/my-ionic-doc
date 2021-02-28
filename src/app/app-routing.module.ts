@@ -58,6 +58,10 @@ const routes: Routes = [
   {
     path: 'grid',
     loadChildren: () => import('./pages/uicomponents/grid/grid.module').then( m => m.GridPageModule)
+  },
+  {
+    path: 'data-binding',
+    loadChildren: () => import('./pages/angular-features/data-binding/data-binding.module').then( m => m.DataBindingPageModule)
   }
 ];
 
