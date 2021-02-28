@@ -26,6 +26,8 @@ export class AppComponent {
 
   public angularFeatures = [
     { title: 'Data Binding', url: '/data-binding', icon: 'grid' },
+    { title: 'Input/Output', url: '/input-output-properties', icon: 'grid' },
+    { title: 'Lifecycle Hooks', url: '/lifecycle-hooks', icon: 'grid' },
   ];
 
   constructor() {}

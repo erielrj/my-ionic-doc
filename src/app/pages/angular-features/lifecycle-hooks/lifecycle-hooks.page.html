@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Lifecycle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h3>Lifecycle Hooks</h3>
+  <img src="https://i.imgur.com/nr4wkCD.png" />
+
+  <p><b>Hooks que são chamados na incialização:</b></p>
+  <p>construtor</p>
+  <p>ngOnInit</p>
+  <p>ngDoCheck</p>
+  <p>ngAfterContentInit</p>
+  <p>ngAfterContentChecked</p>
+  <p>ngAfterViewInit</p>
+  <p>ngAfterViewChecked</p>
+
+
+<div class="ion-margin ion-padding ion-text-center">
+  <p>Valor: {{ valorInicial }}</p>
+  <ion-button (click)="mudarValor()">Mudar valor</ion-button>
+</div>
+
+
+  <p><b>Hooks que serão chamados a cada click:</b></p>
+  <p>ngDoCheck</p>
+  <p>ngAfterContentChecked</p>
+  <p>ngAfterViewChecked</p>
+
+  <br>
+
+  <p><b>Caso haja um @Input no componente a cada mudança nesse input é também chamado antes de tudo o ngOnChanges()</b></p>
+  <p>ngOnChanges</p>
+  <p>ngDoCheck</p>
+  <p>ngAfterContentChecked</p>
+  <p>ngAfterViewChecked</p>
+
+  <br>
+
+  <p>
+    <b>Os métodos mais utilizados são:</b> <br><br>
+      <b>ngOnInit</b><br>
+      Caso não haja necessidade de monitorar input properties (@Input) <br><br>
+      <b>ngOnChanges</b><br>
+      Caso haja necessidade de monitorar input properties (@Input)
+    <br>
+  </p>
+</ion-content>

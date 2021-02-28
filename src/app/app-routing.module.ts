@@ -62,7 +62,15 @@ const routes: Routes = [
   {
     path: 'data-binding',
     loadChildren: () => import('./pages/angular-features/data-binding/data-binding.module').then( m => m.DataBindingPageModule)
+  },  {
+    path: 'input-output-properties',
+    loadChildren: () => import('./pages/angular-features/input-output-properties/input-output-properties.module').then( m => m.InputOutputPropertiesPageModule)
+  },
+  {
+    path: 'lifecycle-hooks',
+    loadChildren: () => import('./pages/angular-features/lifecycle-hooks/lifecycle-hooks.module').then( m => m.LifecycleHooksPageModule)
   }
+
 ];
 
 @NgModule({
